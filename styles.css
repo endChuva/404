@@ -1,7 +1,7 @@
 body {
-    background: linear-gradient(to right, #333, #ccc);
+    background: linear-gradient(to right, #333, #5a5a5a);
     color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -12,41 +12,61 @@ body {
 }
 
 .container {
-    max-width: 420px;
+    width: 100%;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .container {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 90%;
+    }
 }
 
 .image {
-    width: 150px; 
-    height: 150px;
-    margin: 0 auto 20px; 
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
     border-radius: 10px;
-    background-color: #333; 
+    background-color: #333;
 }
 
 h1 {
-    font-size: 2.5em;
-    color: #fff; 
-    margin: 0 0 10px; 
-    font-weight: normal; 
+    font-size: 3em;
+    color: #fff;
+    margin: 0 0 10px;
+    font-weight: bold;
 }
 
 p {
-    font-size: 1em;
-    margin: 0 0 20px; 
-    color: #ccc; 
+    font-size: 1.2em;
+    margin: 0 0 20px;
+    color: #ccc;
 }
 
 a {
-    color: #fff; 
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 1px solid #fff; 
+    border-bottom: 2px solid #fff;
+    transition: color 0.3s, border-bottom-color 0.3s;
 }
 
 a:hover {
-    color: #ccc; 
+    color: #ccc;
     border-bottom-color: #ccc;
 }
